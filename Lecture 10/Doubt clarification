@@ -1,0 +1,22 @@
+ObjectProvider<OrderRequest>
+These are completely different things.
+Spring creates something like:
+ObjectProvider proxy/helper
+==================================================================
+1. Read application.properties
+ 
+2. Create PaymentProperties object
+type=null
+retryCount=0
+ 
+3. @ConfigurationProperties binding  --> setter based binding
+setType("UPI")
+setRetryCount(3)
+ 
+4. Store PaymentProperties bean
+ 
+5. Create PaymentGateway
+ 
+6. Inject PaymentProperties bean into PaymentGateway
+ 
+7. Application starts
